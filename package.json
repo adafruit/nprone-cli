@@ -1,5 +1,5 @@
 {
-  "name": "nprone_raspi",
+  "name": "nprone-raspi",
   "version": "0.1.0",
   "description": "A NPR One client for the Raspberry Pi",
   "main": "index.js",
