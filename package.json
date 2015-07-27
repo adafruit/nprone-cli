@@ -1,0 +1,28 @@
+{
+  "name": "nprone_raspi",
+  "version": "0.1.0",
+  "description": "A NPR One client for the Raspberry Pi",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adafruit/nprone_raspi.git"
+  },
+  "keywords": [
+    "npr",
+    "one",
+    "radio",
+    "raspberry",
+    "pi",
+    "raspi",
+    "pi"
+  ],
+  "author": "Todd Treece <todd@uniontownlabs.org>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adafruit/nprone_raspi/issues"
+  },
+  "homepage": "https://github.com/adafruit/nprone_raspi#readme"
+}
