@@ -23,6 +23,7 @@ gulp.task('lint', function() {
   });
 
   return gulp.src([
+    'index.js',
     'lib/*.js',
     'test/*.js'
   ]).pipe(lint)
