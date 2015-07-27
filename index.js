@@ -9,10 +9,7 @@ var NPR = API({
   password: process.env.NPR_PASSWORD
 });
 
-NPR.authenticate(function(err, token) {
-
-  if(err)
-    return console.error(err);
+NPR.authenticate(function(token) {
 
   if(! token)
     return console.error('invalid token');

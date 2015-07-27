@@ -34,6 +34,7 @@
   "dependencies": {
     "bunyan": "^1.4.0",
     "dotenv": "^1.2.0",
-    "oauth": "^0.9.13"
+    "oauth": "^0.9.13",
+    "request": "^2.60.0"
   }
 }
