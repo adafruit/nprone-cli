@@ -24,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/adafruit/nprone_raspi/issues"
   },
-  "homepage": "https://github.com/adafruit/nprone_raspi#readme"
+  "homepage": "https://github.com/adafruit/nprone_raspi#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0"
+  }
 }
