@@ -1,0 +1,9 @@
+language: node_js
+node_js:
+  - '0.12'
+before_script:
+  - npm install -g gulp
+notifications:
+  email:
+    on_success: change
+    on_failure: change
