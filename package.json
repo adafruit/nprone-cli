@@ -27,5 +27,9 @@
   "homepage": "https://github.com/adafruit/nprone_raspi#readme",
   "devDependencies": {
     "gulp": "^3.9.0"
+  },
+  "dependencies": {
+    "dotenv": "^1.2.0",
+    "oauth": "^0.9.13"
   }
 }
