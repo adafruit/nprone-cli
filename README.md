@@ -5,5 +5,5 @@ This project uses the NPR One API to create a standalone NPR One streaming radio
 ## Installation
 
 ```
-npm install nprone-raspi
+npm install ¯\_(ツ)_/¯
 ```
