@@ -1,9 +1,10 @@
 require('dotenv').load();
 
 var API = require('./lib/api'),
-    fs = require('fs');
+    fs = require('fs'),
+    chalk = require('chalk');
 
-var NPR = API({
+var npr = API({
   client_id: process.env.CLIENT_ID,
   client_secret: process.env.CLIENT_SECRET,
   username: process.env.NPR_USERNAME,
@@ -14,20 +15,16 @@ var logo = fs.readFileSync('./logo.txt', 'utf8');
 
 console.log(logo);
 
-console.log('----------------------------------------');
-console.log('FETCHING THE FIRST 5 RECOMMENDED STORIES');
-console.log('----------------------------------------');
+// silence swagger log output
+process.env.NODE_ENV = 'test';
 
-NPR.getAccessToken()
-  .then(NPR.getRecommendations.bind(NPR, 'npr'))
-  .then(function(recommendations) {
-    // limit to the first 5
-    recommendations = recommendations.slice(0,5)
-    // dump each link to the console
-    recommendations.forEach(function(link) {
-      console.log(link, '\n');
-    });
+console.log(chalk.white.bold('User:', chalk.reset(npr.username)));
+
+npr.getRecommendation('npr')
+  .then(function(url) {
+    console.log(chalk.white.bold('Recommended Story:', chalk.reset(url)));
   })
   .catch(function(err) {
-    console.error(err);
+    console.error(chalk.red.bold('ERROR',JSON.stringify(err)));
   });
+
