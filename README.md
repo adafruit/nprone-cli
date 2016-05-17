@@ -63,3 +63,7 @@ space   play/pause
 →       skip to the next story
 i       mark as interesting
 ```
+
+## License
+
+Copyright (c) 2016 Adafruit Industries. Licensed under the MIT license.
