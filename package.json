@@ -1,11 +1,9 @@
 {
-  "name": "nprone-raspi",
-  "version": "1.0.1",
-  "description": "A NPR One client for the Raspberry Pi",
+  "name": "npr-one",
+  "version": "1.0.7",
+  "description": "A NPR One command line client",
   "main": "index.js",
-  "scripts": {
-    "test": "gulp"
-  },
+  "bin": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/adafruit/nprone_raspi.git"
@@ -14,6 +12,7 @@
     "npr",
     "one",
     "radio",
+    "cli",
     "raspberry",
     "pi",
     "raspi",
@@ -21,24 +20,23 @@
   ],
   "author": "Todd Treece <todd@uniontownlabs.org>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/adafruit/nprone_raspi/issues"
-  },
-  "homepage": "https://github.com/adafruit/nprone_raspi#readme",
-  "devDependencies": {
-    "gulp": "^3.9.0",
-    "gulp-jshint": "^1.11.2",
-    "gulp-mocha": "^2.1.3",
-    "jshint-stylish": "^2.0.1"
-  },
   "dependencies": {
-    "bunyan": "^1.4.0",
-    "chalk": "^1.1.0",
+    "chalk": "^1.1.3",
     "dotenv": "^1.2.0",
     "es6-shim": "^0.32.2",
+    "gauge": "^2.2.1",
     "inquirer": "^0.9.0",
-    "node-omx": "^0.2.1",
-    "swagger-client": "^2.1.2",
-    "wget-improved": "^1.1.1"
+    "keypress": "^0.2.1",
+    "mplayer": "^2.0.1",
+    "node-mplayer": "0.0.6",
+    "npmlog": "^2.0.3",
+    "npr-api": "^1.1.2",
+    "rimraf": "^2.5.2",
+    "string": "^3.3.1",
+    "touch": "^1.0.0",
+    "wget-improved": "^1.3.0"
+  },
+  "optionalDependencies": {
+    "mpr121": "0.0.5"
   }
 }
