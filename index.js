@@ -23,6 +23,8 @@ const story = new Story(npr),
 const logo = fs.readFileSync(path.join(__dirname,'logo.txt'), 'utf8');
 console.log(logo);
 
+console.log('connecting to npr one...');
+
 // silence swagger log output
 process.env.NODE_ENV = 'test';
 
