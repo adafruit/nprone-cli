@@ -67,3 +67,5 @@ i       mark as interesting
 ## License
 
 Copyright (c) 2016 Adafruit Industries. Licensed under the MIT license.
+
+The NPR logo is a registered trademark of NPR used with permission from NPR.  All rights reserved.
