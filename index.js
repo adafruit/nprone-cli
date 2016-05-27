@@ -3,7 +3,7 @@
 
 process.title = 'npr-one';
 
-const  npr = require('npr-api')(),
+const  NPR = require('npr-api'),
        chalk = require('chalk'),
        auth = require('./lib/auth'),
        fs = require('fs'),
@@ -17,7 +17,8 @@ if(process.platform != 'linux' && process.platform != 'darwin') {
   process.exit(1);
 }
 
-const story = new Story(npr),
+const npr = new NPR(),
+      story = new Story(npr),
       player = new Player();
 
 const logo = fs.readFileSync(path.join(__dirname,'logo.txt'), 'utf8');
