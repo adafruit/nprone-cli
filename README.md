@@ -4,6 +4,13 @@ This is a simple command line based NPR One client for OS X and Linux.
 
 ## Installation
 
+This package requires the latest stable version of [Node.js](https://nodejs.org) (v6.0 or higher).
+
+```sh
+$ node -v
+v6.2.0
+```
+
 Install `mplayer` on OS X using [homebrew](http://brew.sh/):
 
 ```
