@@ -31,8 +31,7 @@ npm install -g npr-one
 
 ## Usage
 
-Sign into the [NPR Dev Console](http://dev.npr.org/) and enter your App ID & Secret. The audio player
-will save your authorization and begin playing.
+Sign into the [NPR Dev Console](http://dev.npr.org/), create a new app, and use your App ID & Secret to authorize the CLI. The audio player will save your authorization and begin playing.
 
 ```
 $ npr-one
