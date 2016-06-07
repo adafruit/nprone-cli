@@ -3,7 +3,7 @@
 TEMPLATE='pm2.service'
 SERVICE='/etc/systemd/system/pm2.service'
 
-if [ -f $SERVICE ]; then
+if [ ! -f $SERVICE ]; then
   sudo cp $TEMPLATE $SERVICE
   sudo systemctl enable $SERVICE
   sudo systemctl start $SERVICE
