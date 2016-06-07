@@ -25,20 +25,20 @@ const logo = fs.readFileSync(path.join(__dirname,'logo.txt'), 'utf8');
 console.log(logo);
 console.log('checking for update...');
 
+if(process.platform == 'linux' && process.arch == 'arm')
+  exec('./install-service');
+
 const update = new AutoUpdate(pkg);
 
 update.on('error', (err) => { console.error('update failed.'); launch(); });
 update.on('update', () => console.log('updating...'));
 update.on('finish', () => launch());
 
-if(process.platform == 'linux' && process.arch == 'arm')
-  exec('./install-service');
-
 const launch = function() {
 
-const npr = new NPR(),
-      story = new Story(npr),
-      player = new Player();
+  const npr = new NPR(),
+        story = new Story(npr),
+        player = new Player();
 
   console.log('connecting to npr one...');
 
