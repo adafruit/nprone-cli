@@ -9,6 +9,7 @@ if(process.platform != 'linux' && process.platform != 'darwin') {
 }
 
 const AutoUpdate = require('cli-autoupdate'),
+      exec = require('child_process').exec,
       NPR = require('npr-api'),
       chalk = require('chalk'),
       auth = require('./lib/auth'),
@@ -29,6 +30,9 @@ const update = new AutoUpdate(pkg);
 update.on('error', (err) => { console.error('update failed.'); launch(); });
 update.on('update', () => console.log('updating...'));
 update.on('finish', () => launch());
+
+if(process.platform == 'linux' && process.arch == 'arm')
+  exec('./install-service');
 
 const launch = function() {
 
