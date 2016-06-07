@@ -3,7 +3,7 @@
   "version": "1.3.0",
   "description": "A NPR One command line client",
   "main": "index.js",
-  "bin": "auto-update.js",
+  "bin": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/adafruit/nprone_raspi.git"
