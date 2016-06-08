@@ -36,6 +36,6 @@
     "wget-improved": "^1.3.0"
   },
   "optionalDependencies": {
-    "mpr121": "adafruit/node_mpr121"
+    "adafruit-mpr121": "^1.0.0"
   }
 }
