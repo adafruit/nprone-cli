@@ -1,6 +1,6 @@
 {
   "name": "npr-one",
-  "version": "1.4.5",
+  "version": "1.4.6",
   "description": "A NPR One command line client",
   "main": "index.js",
   "bin": "./cli",
