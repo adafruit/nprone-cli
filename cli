@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+cat logo.txt
+
+_LATEST=$(npm view npr-one version)
+_CURRENT=$(node version.js)
+_TEMPLATE='pm2.service'
+_SERVICE='/etc/systemd/system/pm2.service'
+_RELEASE='/etc/os-release'
+
+if [ -f $_RELEASE ]; then
+
+  source $_RELEASE
+
+  if [ ID == 'rasbian' ] && [ ! -f $_SERVICE ]; then
+    sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}
+    sudo cp $_TEMPLATE $_SERVICE
+    sudo systemctl enable $_SERVICE
+    sudo systemctl start $_SERVICE
+  fi
+
+fi
+
+if [ $_CURRENT != $_LATEST ]; then
+  echo "updating..."
+  npm install -g npr-one &> /dev/null
+fi
+
+node index.js
