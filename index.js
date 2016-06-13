@@ -12,6 +12,8 @@ const NPR = require('npr-api'),
       auth = require('./lib/auth'),
       fs = require('fs'),
       path = require('path'),
+      config = path.join(process.env['HOME'], '.npr-one'),
+      dotenv = require('dotenv').load({silent: true, path: config}),
       Player = require('./lib/player'),
       Story = require('./lib/story'),
       UI = require('./lib/ui');
@@ -39,13 +41,19 @@ npr.one
    .then(story.getRecommendations.bind(story))
    .then(player.load.bind(player))
    .then(() => {
-     const ui = new UI();
+
+     const ui = new UI({
+       touchThreshold: process.env.MPR121_TOUCH,
+       releaseThreshold: process.env.MPR121_RELEASE
+     });
+
      ui.on('skip', player.skip.bind(player));
      ui.on('pause', player.pause.bind(player));
      ui.on('rewind', player.rewind.bind(player));
      ui.on('interesting', player.interesting.bind(player));
      ui.on('volumeup', player.increaseVolume.bind(player));
      ui.on('volumedown', player.decreaseVolume.bind(player));
+
    })
    .catch(function(err) {
      console.error(err, err.stack);
