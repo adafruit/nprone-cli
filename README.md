@@ -63,7 +63,7 @@ $ npr-one
 
 ```
 Screenshot of Terminal in with Color:
-![nprone-cli in color terminal](/NPR_Terminal.png?raw=true "nprone-cli in color terminal")
+[nprone-cli in color terminal](/master/NPR_Terminal.png?raw=true "nprone-cli in color terminal")
 ```
 
 ### Keyboard Controls
