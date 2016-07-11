@@ -1,6 +1,6 @@
 # NPR One CLI
 
-This is a simple command line based NPR One client for OS X and Linux.
+This is a simple command line based NPR One client for OS X and Linux. A full tutorial with setup instructions can be found [in the Adafruit Learning System](https://learn.adafruit.com/raspberry-pi-zero-npr-one-radio).
 
 ## Installation
 
