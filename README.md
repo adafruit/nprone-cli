@@ -31,7 +31,9 @@ npm install -g npr-one
 
 ## Usage
 
-Sign into the [NPR Dev Console](http://dev.npr.org/), create a new app, and use your App ID & Secret to authorize the CLI. The audio player will save your authorization and begin playing.
+Sign into the [NPR Dev Console](http://dev.npr.org/), create a new app, and record your App ID & Secret.
+To authorize the CLI sign into [NPR Activate Console](http://www.npr.org/oauth2/device/activate) and provide the recorded information.
+The audio player will save your authorization and begin playing.
 
 ```
 $ npr-one
@@ -57,6 +59,11 @@ $ npr-one
 [downloaded] Tax Season
 [downloaded] Adapting To A More Extreme Climate, Coastal Cities Get Creative
 [downloaded] NPR thanks our sponsors
+```
+
+```
+Screenshot of Terminal in with Color:
+![nprone-cli in color terminal](/master/NPR_Terminal.png?raw=true)
 ```
 
 ### Keyboard Controls
